@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/bootstrap/bootstrap.css">
+  <script src="/js/bootstrap/bootstrap.js"></script>
+  <script src="/js/bootstrap/jquery-3.6.4.slim.min.map"></script>
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/servicios/customers-service.js"></script>
+  <title>saso_practica</title>
+</head>
+
+<body>
+  <header></header>
+  <nav class="navbar navbar-expand-lg bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="/index.html"><img class="logo" src="/img/valorant-logo-0.png" alt=""></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/clientes.html">clientes</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/ventas.html">ventas</a>
+          </li>
+
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+  <div class="container mt-2">
+    <h1>Gestor de Clientes</h1>
+    <ul class="nav nav-tabs">
+      <li class="nav-item">
+        <a class="nav-link tabOpcion" data-verOcultar="['#reg',['#listar','#buscar']"  href="#" id="registro">registrar</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link tabOpcion" data-verOcultar="['#listar',['reg','#buscar']"  href="#" id="listar"> listar Cliente </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link tabOpcion" data-verOcultar="['#buscar',['#listar','#reg']"  href="" id="buscar">Buscar Cliente</a>
+      </li>
+    </ul>
+    </ul>
+    <div class="container reg">
+      <div id="reg" style="display: display;">
+        <div class="card">
+          <h5 class="card-header">Registro de clientes</h5>
+          <div class="card-body">
+            <div class="container">
+              <div class="row g-3">
+                <div class="col-12">
+                  <form id="frmData">
+                    <div class="row g-3">
+                      <div class="col-4">
+                        <label for="createdAt" class="form-label">Fecha registro</label>
+                        <input type="date" class="form-control" id="createdAt" name="createdAt">
+                      </div>
+                      <div class="col-4">
+                        <label for="nombres" class="form-label">Nombre del Cliente</label>
+                        <input type="text" class="form-control" id="nombres" name="nombres">
+                      </div>
+                      <div class="col-4">
+                        <label for="apellidos" class="form-label">Apellidos</label>
+                        <input type="text" class="form-control" id="apellidos" name="apellidos">
+                      </div>
+                    </div>
+                    <div class="row g-3">
+                      <div class="col-4">
+                        <label for="email" class="form-label">Email cliente</label>
+                        <input type="email" class="form-control" id="email" name="email">
+                      </div>
+                      <div class="col-4">
+                        <label for="nroMovil" class="form-label">Nro Movil</label>
+                        <input type="text" class="form-control" id="nroMovil" name="nroMovil">
+                      </div>
+                      <div class="col-4">
+                        <label for="fechaNacimiento" class="form-label">Fecha Nacimiento</label>
+                        <input type="date" class="form-control" id="fechaNacimiento" name="fechaNacimiento">
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <div class="container mt-4 text-center">
+              <a href="#" class="btn btn-primary" id="btnNuevo">Nuevo cliente</a>
+              <a href="#" class="btn btn-danger" id="btnCancelar">Cancelar registro</a>
+              <a href="#" class="btn btn-success" id="btnGuardar">Guardar cliente</a>
+              <a href="#" class="btn btn-warning" id="btnEditar">Editar cliente</a>
+              <a href="#" class="btn btn-danger" id="btnEliminar">Eliminar cliente</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    <footer></footer>
+</body>
+
+</html>
